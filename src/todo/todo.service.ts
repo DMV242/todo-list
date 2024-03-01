@@ -35,7 +35,7 @@ export class TodoService {
         data: updateTodoDto,
       });
     }
-    throw new NotFoundException('The todo you want to update not found');
+    throw new NotFoundException('The Task you want to update not found');
   }
 
   async remove(id: number) {
@@ -44,7 +44,7 @@ export class TodoService {
         where: { id },
       });
     }
-    throw new NotFoundException('This todo does not exist');
+    throw new NotFoundException('This Task does not exist');
   }
 
   async isTodoExists(id: number) {
